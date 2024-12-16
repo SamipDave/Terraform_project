@@ -1,6 +1,6 @@
 # EC2 instance configuration
 resource "aws_instance" "tf_server" {
-  ami                         = "ami-0e86e20dae9224db8" # change according to region
+  ami                         = "ami-0e2c8caa4b6378d8c" # change according to region
   instance_type               = "t2.micro"
   vpc_security_group_ids      = [aws_security_group.ec2_sg.id] # associate security group
   associate_public_ip_address = true
@@ -38,7 +38,7 @@ resource "aws_instance" "tf_server" {
 resource "aws_security_group" "ec2_sg" {
   name        = "allow_ssh_http"
   description = "Allow SSH and HTTP traffic"
-  vpc_id      = "vpc-00ec4841e453b1748" # default VPC
+  vpc_id      = "vpc-0be511e226990406b" # default VPC
 
   ingress {
     description = "TLS from VPC"
