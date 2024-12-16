@@ -7,7 +7,7 @@ resource "aws_db_instance" "tf_rds_instance" {
   engine_version         = "8.0"
   instance_class         = "db.t3.micro"
   username               = "admin"
-  password               = "kunal123"
+  password               = "samip123"
   parameter_group_name   = "default.mysql8.0"
   vpc_security_group_ids = [aws_security_group.rds_sg.id] # attach RDS security group
   skip_final_snapshot    = true
@@ -15,7 +15,7 @@ resource "aws_db_instance" "tf_rds_instance" {
 }
 
 resource "aws_security_group" "rds_sg" {
-  vpc_id      = "vpc-00ec4841e453b1748" # default VPC
+  vpc_id      = "vpc-0be511e226990406b" # default VPC
   name        = "allow_mysql"
   description = "Allow MySQL traffic"
 
