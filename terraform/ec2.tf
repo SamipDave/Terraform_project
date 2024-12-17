@@ -4,7 +4,7 @@ resource "aws_instance" "tf_server" {
   instance_type               = "t2.micro"
   vpc_security_group_ids      = [aws_security_group.ec2_sg.id] # associate security group
   associate_public_ip_address = true
-  key_name                    = "" # private aws key name
+  key_name                    = "Jenkins_shared_library" # private aws key name
   user_data                   = <<-EOF
                                 #!/bin/bash
 
